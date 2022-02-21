@@ -30,7 +30,8 @@ in order to first execute your own fortran program we should learn the basics of
 In order to properly write and compile out fortran program web obviously need to write some code, in order to do this fortran makes us start and end a program, then declare code in between those calls, the simplist program we will be doing is reading user input as a simple program, since it gives a better understanding of fortran95 in todays world, and situation. what we will be doing is naming our program as main, reading the user input, and declaring what type the user is supposed to input in this case we will use char as a integer with conditional if statements, this program will simply grab the user input, print out two options to get the time or exit, declare integers and characters, and use if statements to determine what the user inputted 
 
 <br>
-code
+
+Lets first start our program 
 
 ```f90
 program main 
@@ -38,3 +39,13 @@ program main
       
 end program main
 ```
+
+this is how we start or declare a program in fortran, the function `program main` declares the program type kinda like in go how you have that as well 
+
+```go
+program main
+```
+<br>
+we use the `implicit none` function and delcaration to to inhibit a very old feature of Fortran that by default treats all variables that start with the letters i, j, k, l, m and n as integers, this means that any variable declared or used that is i, j, k, l, or m will be pre determined as a integer without proper decleration and ones that are not incldued are seen as arguments.
+
+<br>
