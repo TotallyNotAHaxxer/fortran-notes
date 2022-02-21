@@ -22,4 +22,4 @@ Fortran as we all know is a language that was built during the 50's to be exact 
 in order to first execute your own fortran program we should learn the basics of how fortran works and what file extensions go under it even compilers, so if you own a linux distribution you should have a compiler for fortran called `gfortran` this im sure you can get for windows also but im not exactly sure how it would work given i personally have not tried to write fortran on windows. to start writing our fortran program we need to initalize a file, the name of our first fortran program will be `main.f90` once you have saved that `depending on your IDE, OS, or ENV` you should see the icon change to something like as seen below 
 
 
-![alt text](img/geo.png)
+![alt text](1200px-Fortran_logo.svg.png)
