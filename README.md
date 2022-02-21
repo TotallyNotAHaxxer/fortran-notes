@@ -21,5 +21,20 @@ Fortran as we all know is a language that was built during the 50's to be exact 
 
 in order to first execute your own fortran program we should learn the basics of how fortran works and what file extensions go under it even compilers, so if you own a linux distribution you should have a compiler for fortran called `gfortran` this im sure you can get for windows also but im not exactly sure how it would work given i personally have not tried to write fortran on windows. to start writing our fortran program we need to initalize a file, the name of our first fortran program will be `main.f90` once you have saved that `depending on your IDE, OS, or ENV` you should see the icon change to something like as seen below 
 
+# image 
 
 ![alt text](image.png)
+
+# Writing your first program in fortran 
+
+In order to properly write and compile out fortran program web obviously need to write some code, in order to do this fortran makes us start and end a program, then declare code in between those calls, the simplist program we will be doing is reading user input as a simple program, since it gives a better understanding of fortran95 in todays world, and situation. what we will be doing is naming our program as main, reading the user input, and declaring what type the user is supposed to input in this case we will use char as a integer with conditional if statements, this program will simply grab the user input, print out two options to get the time or exit, declare integers and characters, and use if statements to determine what the user inputted 
+
+<br>
+code
+
+```f90
+program main 
+      implicit none
+      
+end program main
+```
