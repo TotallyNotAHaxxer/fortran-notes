@@ -93,4 +93,11 @@ like we have in this brick of code
 
 `integer date_time(8)`
 
-moving to the clear decleration
+moving to the clear decleration and print statements, let me first start off by saying this is not needed, clear statements are REALLY ANNOYING to do or make 
+in fortran so i really wont even bother with them, so- ignore that part in the script, since it deals with ACHAR, ARCHAR, and hexidecimals that reaches above this tutorial, or understanding / point of the repo. below the clear statement we use a functon called `WRITE(*,*)CLEAR`, the write statement is called to write data from an input into an output, if we break this down a little you can understand it 
+
+so the write declares that you arw writing input to output, the first `*` declares that is input, the `,` is a seperator, and the second `*` is a format to direct the formatted output into the STD output. this just pushed all the hex values and format values onto the output and formats them.
+
+once done we then move onto formating the data using the call statement for the date and time, the call statement here executes the sub routine in the fortran code, the subroutine was the function that we called when we declared `INETGER date_time(8)` this is known as a sub routine or function (Note: This is often seen in perl as a base function being declared with the key word SUB which is written as follows **sub main() {say "hello world";}**), it executes the sub routine with additional arguments, hence the (8) which declares the values seen below which are `call date_and_time(b(1), b(2), b(3), date_time)`, the call fucntion pushed the data into the date and time sub routine named date_time
+
+
