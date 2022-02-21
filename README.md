@@ -98,6 +98,121 @@ in fortran so i really wont even bother with them, so- ignore that part in the s
 
 so the write declares that you arw writing input to output, the first `*` declares that is input, the `,` is a seperator, and the second `*` is a format to direct the formatted output into the STD output. this just pushed all the hex values and format values onto the output and formats them.
 
-once done we then move onto formating the data using the call statement for the date and time, the call statement here executes the sub routine in the fortran code, the subroutine was the function that we called when we declared `INETGER date_time(8)` this is known as a sub routine or function (Note: This is often seen in perl as a base function being declared with the key word SUB which is written as follows **sub main() {say "hello world";}**), it executes the sub routine with additional arguments, hence the (8) which declares the values seen below which are `call date_and_time(b(1), b(2), b(3), date_time)`, the call fucntion pushed the data into the date and time sub routine named date_time
+once done we then move onto formating the data using the call statement for the date and time, the call statement here executes the sub routine in the fortran code, the subroutine was the function that we called when we declared `INETGER date_time(8)` this is known as a sub routine or function (Note: This is often seen in perl as a base function being declared with the key word SUB which is written as follows **sub main() {say "hello world";}**), it executes the sub routine with additional arguments, hence the (8) which declares the values seen below which are `call date_and_time(b(1), b(2), b(3), date_time)`, the call fucntion pushed the data into the date and time sub routine named date_time, now that we have finished moving on to the functions and explaining what they do lets move onto the actuall read and user input, so to grab user input in fortran you need to declare the type of input which as you have seen we declared when we did 
 
+```f90
+program main 
+	implicit none
+	INTEGER :: options
+end program main
+```
 
+to initalize this value we will be using the READ function to read and capture the input from the user, since we pre declared the variables data type we do not need to redeclare our block, right now the code should look like this 
+
+```f90
+program main
+	implicit none
+	INTEGER :: options
+	integer date_time(8)
+	character*10 b(3)
+	! clear statement
+	CHARACTER CLEAR*6
+	CLEAR=CHAR(27)//'[H'//CHAR(27)//'[J'
+	!
+	call date_and_time(b(1), b(2), b(3), date_time)
+end program main
+```
+
+to initalize the input sub routine we can do the following 
+
+```f90
+read(*,*) options
+```
+
+this will create a simple user input field, the format for read as follows into the WRITE function declared to call CLEAR
+
+now we need to declare the IF statements to check if the user input is equal to what we have as an option to do this we do the folowing 
+
+since we declared options as an integer, the only value that fortran will accept as a user based input value will be numbers 1-10000 until you have to reach decimal points, since we did not declare the type as a decimal, real, or any other type which is or can be dedicated to a decimal point value, which would be any number like 1.0000 or 1.134247234789234789234879234 if we do manage to input this fortran will give us this error saying fuck you this is not allowed
+
+```
+ : Please Enter a command below:
+1.84737834789345789
+At line 28 of file main.f90 (unit = 5, file = 'stdin')
+Fortran runtime error: Bad integer for item 1 in list input
+
+Error termination. Backtrace:
+#0  0x7f89e7408bd0 in ???
+#1  0x7f89e7409685 in ???
+#2  0x7f89e740a25b in ???
+#3  0x7f89e7635048 in ???
+#4  0x7f89e76380e1 in ???
+#5  0x7f89e7638cd1 in ???
+#6  0x55975842e674 in ???
+#7  0x55975842ee23 in ???
+#8  0x7f89e724ad09 in __libc_start_main
+	at ../csu/libc-start.c:308
+#9  0x55975842e109 in ???
+#10  0xffffffffffffffff in ???
+
+```
+
+lets actually get to finishing this, the following is the syntax of IF statements 
+
+```
+IF (variable == value) THEN
+	print*, value
+ELSE IF (variable == value) THEN
+	 ! do something
+END IF
+```
+
+similar to C's END IF and IF expression, lets use this in our options
+
+```f90
+program main
+	implicit none
+	INTEGER :: options
+	integer date_time(8)
+	character*10 b(3)
+	! clear statement
+	CHARACTER CLEAR*6
+	CLEAR=CHAR(27)//'[H'//CHAR(27)//'[J'
+	!
+	call date_and_time(b(1), b(2), b(3), date_time)
+	! i 
+	! added a banner you can too
+	!
+	print *," ____  _____  ____  ____  ____    __    _  _     ____  _____  ____      ____  _   _  ____     _    _  ____  _  _ "
+        print *,"( ___)(  _  )(  _ \(_  _)(  _ \  /__\  ( \( )___( ___)(  _  )(  _ \ ___(_  _)( )_( )( ___)___( \/\/ )(_  _)( \( )"
+        print *," )__)  )(_)(  )   /  )(   )   / /(__)\  )  ((___))__)  )(_)(  )   /(___) )(   ) _ (  )__)(___))    (  _)(_  )  ( "
+        print *,"(__)  (_____)(_)\_) (__) (_)\_)(__)(__)(_)\_)   (__)  (_____)(_)\_)     (__) (_) (_)(____)   (__/\__)(____)(_)\_)"
+        print *,"[1] -> Get the date and time                  | [2] Leave and exit"
+        print *,"-----------------------------------------------------------------------------------------------------------------"
+        print *,""
+        print *, ": Please Enter a command below:"
+        read(*,*) options
+	! applying IF conditions
+	IF (options == 1) THEN
+		        print *,'date_time                      values'
+			print *,'----------------------------------------------------'
+			print *,'year                       | ',date_time(1)
+			print *,'month                      | ',date_time(2)
+			print *,'day                        | ',date_time(3)
+			print *,'time difference in minutes | ',date_time(4)
+			print *,'hour                       | ',date_time(5)
+			print *,'minute on the hour         | ',date_time(6)
+			print *,'seconds of minute          | ',date_time(7)
+			print *,'milliseconds of second     | ',date_time(8)
+			print *,'----------SUB-DATE-COLS----|---------------------------'
+			print *, 'DATE=',b(1)
+			print *, 'TIME=',b(2)
+			print *, 'ZONE=',b(3)
+	ELSE IF (options == 2) THEN 
+		print*, "[+] Goodbye :D"
+	END IF
+	
+	
+end program main
+
+```
