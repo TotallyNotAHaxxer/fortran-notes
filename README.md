@@ -310,3 +310,68 @@ execution
 
 `./main`
 
+when  we run the program and input the option 1 we get the following output 
+
+```
+  ____  _____  ____  ____  ____    __    _  _     ____  _____  ____      ____  _   _  ____     _    _  ____  _  _ 
+ ( ___)(  _  )(  _ \(_  _)(  _ \  /__\  ( \( )___( ___)(  _  )(  _ \ ___(_  _)( )_( )( ___)___( \/\/ )(_  _)( \( )
+  )__)  )(_)(  )   /  )(   )   / /(__)\  )  ((___))__)  )(_)(  )   /(___) )(   ) _ (  )__)(___))    (  _)(_  )  ( 
+ (__)  (_____)(_)\_) (__) (_)\_)(__)(__)(_)\_)   (__)  (_____)(_)\_)     (__) (_) (_)(____)   (__/\__)(____)(_)\_)
+ [1] -> Get the date and time                  | [2] Leave and exit
+ -----------------------------------------------------------------------------------------------------------------
+ 
+ : Please Enter a command below:
+1
+ date_time                      values
+ ----------------------------------------------------
+ year                       |         2022
+ month                      |            2
+ day                        |           22
+ time difference in minutes |         -300
+ hour                       |            7
+ minute on the hour         |            8
+ seconds of minute          |           19
+ milliseconds of second     |          675
+ ----------SUB-DATE-COLS----|---------------------------
+ DATE=20220222  
+ TIME=070819.675
+ ZONE=-0500 
+```
+
+# simple parts of fortran 
+
+> Print statements (simple non format)
+
+```f90
+print*, ""
+print*, '', value
+```
+
+> declarimg variables and data types 
+
+```f90
+INTEGER   :: variable1, vriable12
+REAL      :: variable2, variable3
+CHARACTER :: variable1, var9
+! non list
+
+integer name1
+real name2
+character name4
+```
+
+> Implicit typing 
+
+```
+implicit none
+```
+if implicit none is declared in a program, and a variable is not declared as a type, then the first letter will declare its type EX 
+
+```f90
+program main 
+	implicit none
+	la = 1
+	print*, 'name -> ', la
+	! automatically declares the variable type as an INTEGER because when implcit is declared it declares a list of letters which includes l as an integer
+end program main
+```
