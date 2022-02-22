@@ -375,3 +375,25 @@ program main
 	! automatically declares the variable type as an INTEGER because when implcit is declared it declares a list of letters which includes l as an integer
 end program main
 ```
+
+> reading, opening, and writing to files
+
+A thing to note about fortran is some symbols, numbers, or letters can not be used in certian statements, an example here is the number 1 during file write, you can not use it since 1 is used as a number to open the files, read files, and close files, when you write to a file you need to declare the UNIT, which can NOT be declared as 1, Fortran uses the unit number to access the file with later read and write statements. Several files can be open at once, but each must have a different number. There is one thing to remember about numbering a file - you cannot use the number 6, as GNU Fortran reserves that number to refer to the screen.
+Note that quotes enclose the filename. Also, in specifying a directory path for a file, you must use double backslashes instead of single ones. Do not put a space on either side of the colon after the drive letter. If you do not specify a drive or directory path for a file, or if you specify the same drive upon which GNU Fortran is installed but without a path, GNU Fortran will by default assume the file is located on the same drive and in the same directory from where Fortran is running.
+If the named file does not already exist, Fortran will create it; if it does exist, Fortran will replace it. (So don't mistakenly give the file the same name as another important file!)
+
+an example of opening a gile will be as follows 
+
+```f90
+program main 
+	implicit none
+	open(unit = 2, file = "filename.txt")
+	open(unit = 3, file = "C:\\drivename\\filepath1\\filepath2\\file.txt"
+	open(unit = 4, file = "/home/user/main.txt"
+	open(unit = 5, file = "/usr/share/wordlists/dnsmap.txt"
+	open(unit = 7, file = "filename.pdf"
+end program main
+```
+
+
+
