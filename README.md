@@ -382,7 +382,11 @@ A thing to note about fortran is some symbols, numbers, or letters can not be us
 Note that quotes enclose the filename. Also, in specifying a directory path for a file, you must use double backslashes instead of single ones. Do not put a space on either side of the colon after the drive letter. If you do not specify a drive or directory path for a file, or if you specify the same drive upon which GNU Fortran is installed but without a path, GNU Fortran will by default assume the file is located on the same drive and in the same directory from where Fortran is running.
 If the named file does not already exist, Fortran will create it; if it does exist, Fortran will replace it. (So don't mistakenly give the file the same name as another important file!)
 
+
+
 an example of opening a gile will be as follows 
+
+
 
 ```f90
 program main 
@@ -394,6 +398,15 @@ program main
 	open(unit = 7, file = "filename.pdf"
 end program main
 ```
+
+Writing to files 
+
+while the concept of opening a file is quite intriguing / hard to understand as to why fortran makes it or is this wacky writing to files is fairly simple, for this we will use 3 sub routines, write, open, close. 
+
+open `opens the file`<br>
+close `closes the file`<br>
+write `writes to the file`<br>
+
 
 
 
