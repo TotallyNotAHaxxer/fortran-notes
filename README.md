@@ -500,5 +500,19 @@ THE NEXT LINE IS ME USING MY TERMINAL TO OUTPUT THE TXT FILE
 
 ```
 
+as you can see this example of using the unit in write was a bit better, sometimes using write witrh more complex characters and I/O Statements can make a major difference when writing to a file
+
+> Data Types 
+
+| Data type  | Description              | Usage                                       |
+| ---------- | ------------------------ | ------------------------------------------- |
+| Integer    | Store Integer variables  | integer :: var                              |
+| Real       | Store FLOAT values       | real :: var                                 |  
+| Complex    | Store complex numbers    | complex :: x,y                              |
+| Logical    | Store boolean values     | logical :: x=.True. , logical :: x= .FALSE. |
+| Characters | Store string character   | character :: char                           |
+
+
+
 
 
