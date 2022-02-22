@@ -512,7 +512,141 @@ as you can see this example of using the unit in write was a bit better, sometim
 | Logical    | Store boolean values     | logical :: x=.True. , logical :: x= .FALSE. |
 | Characters | Store string character   | character :: char                           |
 
+Syntax: type_structure :: variable_name
+
+**Example**
+
+```f90
+ ! declaring variables
+   integer :: marks      ! Integer variable
+   character(len=30) :: name ! string variable of length 30 characters
+   
+   !assigning values to variables
+   marks = 60
+   name = "mark"  
+```
+
+> Derived Data types
+
+**Example**
+
+```f90
+
+!Type Declaration
+   type typeName      
+      !declarations
+   end type typeName
+
+!Declaring type variables
+   type(typeName) :: type-varName
+
+!accessing the components of the derived type
+   
+   type-varName%type-declaration-variable = value
+```
+> Operators
+
+| Operator Type               | Description                           |
+| --------------------------- | ------------------------------------- |
+| Arithmetic Operator         | +, -, *, /, **                        |
+| Relational Operator         | <, >, <=, >=, /=, ==                  |
+| Logical    Operator         | .and. , .or. , .not. , .eqv. , .neqv. |
 
 
+> Arrays
+
+Syntax:  data-type, dimension (x,y) :: array-name
+
+Example: 
+
+```f90
+integer, dimension(3,3) :: cube
+```
+
+<h2>Conditional Statements</h2>
+
+> If
+
+```f90
+if (logical-expression) then      
+   !Code  
+end if
+```
+
+> If-Else
+
+```f90
+if (logical-expression) then     
+   !code when the condition is true
+else
+   !code when the condition fails
+end if
+```
+
+> Case
+
+```f90
+[name:] select case (regular-expression) 
+   case (value1)          
+   ! code for value 1          
+   ... case (value2)           
+   ! code for value 2           
+   ...       
+   case default          
+   ! default code          
+   ...   
+end select [name]
+```
+
+> Loops ===============================================
+
+> Do
+
+```f90
+do i = start, stop [,step]    
+   ! code
+end do
+```
 
 
+> Do-While
+
+```f90
+do while (condition) 
+   !Code
+end do
+```
+
+> Function
+
+A function is a procedure which returns a single value.
+
+```f90 
+function functionName(arguments)  
+  ! code 
+end function [functionName]
+```
+
+> Calling a function
+
+```f90
+functionName(arguments)  
+```
+
+> Sub-routines
+
+
+Subroutine is a procedure which does not return a value.
+
+```f90
+
+subroutine name(arguments)
+  ! code  
+end subroutine [name]
+```
+
+> Calling a Sub-routine
+
+```
+call subroutineName(arguments)  
+```
