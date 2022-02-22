@@ -407,6 +407,98 @@ open `opens the file`<br>
 close `closes the file`<br>
 write `writes to the file`<br>
 
+so lets write some data, say we want to write hello to a file 
+
+```f90
+program main
+        CHARACTER name
+        print*, "Enter a name: "
+        read(*,*) name
+        open(unit = 2, file = "main.txt")
+        write(2, *) name
+        close(2)
+end program main
+```
+
+when we use the command `cat main.txt` which fortran created if there was no file with that name, we get the output of the first letter we input, sometimes this will bug out as the full name should be written to the file, howveer using the write function would not be the best, a better example would be as follows 
+
+this is a simple calculator i wrote a bit back 
+
+```f90
+program calc
+	implicit none
+	INTEGER :: options
+	REAL :: addanswer, subtractanswer
+	REAL :: multiplyanswer, divisionanswer
+	REAL :: a, b
+	print *, " _____         _                     ___ ___ "
+	print *, "|   __|___ ___| |_ ___ ___ ___ _____| . |  _|"
+	print *, "|   __| . |  _|  _|  _| .'|   |_____|_  |_  |"
+	print *, "|__|  |___|_| |_| |_| |__,|_|_|_____|___|___|"                                     
+	print *, "-------------------------------------------------|"
+	print *, "1  => calculate a basic equation                 |"
+	print *, "-------------------------------------------------|"
+	print *, " Please enter a command below: "
+	read(*,*) options
+	IF (options == 1) THEN
+		print *, ''	 
+		print *, '[ | ] Please input the first integer  '
+		read(*,*) a
+		print *, ''
+		print *, '[ | ] Please input the second integer '
+		read(*,*) b
+		!
+		addanswer = a + b
+    		subtractanswer = a - b
+    		multiplyanswer = a * b
+    		divisionanswer = a / b
+		! write to the file
+		open(unit = 2, file = "output.txt")
+       		!the files unit is = to 2 so i would need to make the write unit the same as 2
+		print *, ''//achar(27)//'[31m '//achar(27)//'[0m'
+		write(2, *) a, " + ", b, " = ", addAnswer
+		write(2, *) a, " - ", b, " = ", subtractanswer
+		write(2, *) a, " * ", b, " = ", multiplyanswer
+       	        write(2, *) a, " / ", b, " = ", divisionanswer
+		print *, "------------------------------------------------------------------------"
+		close(2)
+		PRINT*, "[ | ] Data written to a file |output.txt|  [ | ] "
+	END IF
+end program calc
+```
+
+when we finish the program and we actually find an equation to output, this is the output in output.txt 
+
+```
+  _____         _                     ___ ___ 
+ |   __|___ ___| |_ ___ ___ ___ _____| . |  _|
+ |   __| . |  _|  _|  _| .'|   |_____|_  |_  |
+ |__|  |___|_| |_| |_| |__,|_|_|_____|___|___|
+ -------------------------------------------------|
+ 1  => calculate a basic equation                 |
+ -------------------------------------------------|
+  Please enter a command below: 
+1
+ 
+ [ | ] Please input the first integer  
+39
+ 
+ [ | ] Please input the second integer 
+100
+  
+ ------------------------------------------------------------------------
+ [ | ] Data written to a file |output.txt|  [ | ] 
+
+THE NEXT LINE IS ME USING MY TERMINAL TO OUTPUT THE TXT FILE
+
+> cat output.txt
+   39.0000000      +    100.000000      =    139.000000    
+   39.0000000      -    100.000000      =   -61.0000000    
+   39.0000000      *    100.000000      =    3900.00000    
+   39.0000000      /    100.000000      =   0.389999986    
+> 
+
+```
 
 
 
