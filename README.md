@@ -650,3 +650,148 @@ end subroutine [name]
 ```
 call subroutineName(arguments)  
 ```
+
+
+# RESOURCES AND LINKS FOR FORTRAN HELP 
+
+**Orcal documentaion on fortran** 
+
+https://docs.oracle.com/cd/E19059-01/stud.10/819-0492/
+
+**Standards Conformance** 
+
+https://docs.oracle.com/cd/E19059-01/stud.10/819-0492/1_intro.html#pgfId-10134
+
+
+**features of the fortran95 compiler** 
+
+https://docs.oracle.com/cd/E19059-01/stud.10/819-0492/1_intro.html#pgfId-10154
+
+**Fortran utilites**
+
+https://docs.oracle.com/cd/E19059-01/stud.10/819-0492/1_intro.html#pgfId-13233
+
+**Debug utils**
+
+https://docs.oracle.com/cd/E19059-01/stud.10/819-0492/1_intro.html#pgfId-9274
+
+**Sun Preformance Library**
+
+https://docs.oracle.com/cd/E19059-01/stud.10/819-0492/1_intro.html#pgfId-9287
+
+**Interval Arithmatic**
+
+https://docs.oracle.com/cd/E19059-01/stud.10/819-0492/1_intro.html#pgfId-13441
+
+**MAN pages**
+
+https://docs.oracle.com/cd/E19059-01/stud.10/819-0492/1_intro.html#pgfId-13086
+
+
+
+
+> Chapter 4 Using Data Types  
+
+**https://docs.oracle.com/cd/E19059-01/stud.10/819-0492/2_using.html#pgfId-7940**
+
+
+**Data Types**
+
+https://docs.oracle.com/cd/E19059-01/stud.10/819-0492/4_f95.html#pgfId-30304
+
+**Boolean values**
+
+https://docs.oracle.com/cd/E19059-01/stud.10/819-0492/4_f95.html#pgfId-8507
+
+**Abbreviated Size Notation for Numeric Data Types**
+
+https://docs.oracle.com/cd/E19059-01/stud.10/819-0492/4_f95.html#pgfId-18881
+
+
+**Size and Alignment of Data Types**
+
+https://docs.oracle.com/cd/E19059-01/stud.10/819-0492/4_f95.html#pgfId-28644
+
+> Working with data type INTEGERS, REALS, and UASSIGNED
+
+**Unassigned Integers**
+
+https://docs.oracle.com/cd/E19059-01/stud.10/819-0492/4_f95.html#pgfId-30416
+
+**Aithmatic Expressions**
+
+https://docs.oracle.com/cd/E19059-01/stud.10/819-0492/4_f95.html#pgfId-30438
+
+**Relational Expressions**
+
+https://docs.oracle.com/cd/E19059-01/stud.10/819-0492/4_f95.html#pgfId-30448
+
+**Control Constructs**
+
+https://docs.oracle.com/cd/E19059-01/stud.10/819-0492/4_f95.html#pgfId-30452
+
+**Input Output Constructs**
+
+https://docs.oracle.com/cd/E19059-01/stud.10/819-0492/4_f95.html#pgfId-30457
+
+> SCRIPT EXAMPLES, MATHEMATICAL 
+
+**Get used to fortran's math standardization**
+
+http://fortranwork.blogspot.com/p/program-list.html
+
+**ATAN**
+
+https://gcc.gnu.org/onlinedocs/gfortran/ATAN.html
+
+**ATAN FUNCTION**
+
+https://splichal.eu/gccsphinx-final/html/fortran/intrinsic-procedures/atan.html
+
+**ATAN2**
+
+https://splichal.eu/gccsphinx-final/html/fortran/intrinsic-procedures/atan2.html
+
+**ATAN 2D**
+
+https://splichal.eu/gccsphinx-final/html/fortran/intrinsic-procedures/atan2d.html
+
+**ACHAR FORTRAN95 2003 STANDARD**
+
+https://splichal.eu/gccsphinx-final/html/fortran/intrinsic-procedures/achar.html
+
+**ACOS — Arccosine function**
+
+https://splichal.eu/gccsphinx-final/html/fortran/intrinsic-procedures/acos.html
+
+**COS**
+
+https://splichal.eu/gccsphinx-final/html/fortran/intrinsic-procedures/cos.html
+
+**ASIN**
+
+https://splichal.eu/gccsphinx-final/html/fortran/intrinsic-procedures/asin.html
+
+**SIN**
+
+https://splichal.eu/gccsphinx-final/html/fortran/intrinsic-procedures/sin.html
+
+**TAN**
+
+https://splichal.eu/gccsphinx-final/html/fortran/intrinsic-procedures/tan.html
+
+**COT**
+
+https://splichal.eu/gccsphinx-final/html/fortran/intrinsic-procedures/cotan.html
+
+> Other References for math in fortran95
+
+https://www.nsc.liu.se/~boein/f77to90/f95.html
+
+**Data Types, Structures, and mathematical functions in fortran 95**
+
+https://splichal.eu/gccsphinx-final/html/fortran/intrinsic-procedures/
+
+**Oracal docs on fortran95**
+
+https://docs.oracle.com/cd/E19059-01/stud.10/819-0492/
