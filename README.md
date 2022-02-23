@@ -684,7 +684,30 @@ So, that means there were 110 votes from the students that don't like camping in
 
 now we need to find the division answer by dividing the variables, then multiplying the division answer by 100 ( standard forumla for rounding to the nearest whole precent ), and finally round our number and determin if the integer after the decimal is OVER 5 or UNDER 5
 
-lets now appl this to fortran
+lets now apply this to fortran to make a program that will kinda auto solve this based off two values, first we need to mmap out the struture of the program, in this sense we will need a integer structure which defines our first and second input value, then a real statement which defines our multiplication, and division answer, and a read statement which will allow us to take user input as x and y
+
+so first lets declare the basics
+
+> start of the program solve.f90
+
+```f90
+program solve
+	implicit none
+	REAL :: addanswer, subtractanswer               						 ! The addition and subtraction if needed 
+	REAL :: multiplyanswer, divisionanswer            						 ! The main section to declare our multiplication structure and our division answer as REAL numbers
+	REAL :: a, b                                     						 ! The values we will read from the user pre definied struct as a REAL number
+	print *, ""                                      						 ! Seperation statement
+	print *, "Please enter the first integer: "       						 ! First user input prompt
+	read(*,*) a                                       						 ! First  user Input statement prompting real variable A
+	print *, "Please enter the second integer: "      						 ! Second user input prompt
+	read(*,*) b                                     						 ! Second user input statement prompting real variable B
+	print *, "---------------------------------------"					         ! Line break from user input
+	addanswer = a + b                                						 ! 
+    	divisionanswer = a / b                           						 ! Dividing user input values from form A and form B
+	write(*, *) "[ First step ] Divided Answer         -> ", a, " / ", b, " = ", divisionanswer
+
+end program solve
+```
 
 
 
