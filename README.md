@@ -25,6 +25,18 @@ in order to first execute your own fortran program we should learn the basics of
 
 ![alt text](image.png)
 
+
+```
+
+__________            _____                            __________                   _____________             ___       ______              _________________ ________ 
+___  ____/______________  /_____________ _______       ___  ____/_____________      ___  __/__  /______       __ |     / /__(_)______       __<  /_  __ \_  // /_  __ \
+__  /_   _  __ \_  ___/  __/_  ___/  __ `/_  __ \________  /_   _  __ \_  ___/________  /  __  __ \  _ \________ | /| / /__  /__  __ \________  /_  /_/ /  // /_  /_/ /
+_  __/   / /_/ /  /   / /_ _  /   / /_/ /_  / / //_____/  __/   / /_/ /  /   _/_____/  /   _  / / /  __//_____/_ |/ |/ / _  / _  / / //_____/  / _\__, //__  __/\__, / 
+/_/      \____//_/    \__/ /_/    \__,_/ /_/ /_/       /_/      \____//_/           /_/    /_/ /_/\___/       ____/|__/  /_/  /_/ /_/       /_/  /____/   /_/  /____/  
+                                                                                                                                                                       
+
+```
+
 # Writing your first program in fortran 
 
 In order to properly write and compile out fortran program web obviously need to write some code, in order to do this fortran makes us start and end a program, then declare code in between those calls, the simplist program we will be doing is reading user input as a simple program, since it gives a better understanding of fortran95 in todays world, and situation. what we will be doing is naming our program as main, reading the user input, and declaring what type the user is supposed to input in this case we will use char as a integer with conditional if statements, this program will simply grab the user input, print out two options to get the time or exit, declare integers and characters, and use if statements to determine what the user inputted 
