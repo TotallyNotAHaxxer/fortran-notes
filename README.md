@@ -791,7 +791,16 @@ end program main
 
 this is well making our test questions and taking them into fortran to help us solve them, i was quite confused at first but then i actually realized i was missing an entire part of frequency tables XD, anyway this program ask the user for the column total which in our case is 98 and then the row aboves total which is 60, this is confusing scince i could not figure out a way to print it but yeah, another test question down 🌆
 
+example output 
 
+
+```
+ Please input the column total: 
+98
+ Please input the row above's total: 
+60
+ The finished Frequency ->    98.0000000      -    60.0000000      =    38.0000000 
+```
 
 # RESOURCES AND LINKS FOR FORTRAN HELP 
 
