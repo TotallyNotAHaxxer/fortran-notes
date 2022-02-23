@@ -745,6 +745,21 @@ end program main
 
 ```
 
+when we finally run the program and input our variables we will get this output 
+
+```
+ [ | ] Please input the first integer  
+36
+ 
+ [ | ] Please input the second integer 
+110
+ ------------------------------------------
+ [ First step ] Divided Answer         ->    36.0000000      /    110.000000      =   0.327272713    
+ 
+ [ Second Step ] Multiplication Answer ->   0.327272713      * 100 =    32.7272720
+```
+
+we now know our answer will be 33% given that we are rounding the the nearest whole precent and that the integer after the decimal point in 32. is over 5, so we are rounding up instead of down, if our integer was below 5 we round down thus our answer would be 32%
 
 
 # RESOURCES AND LINKS FOR FORTRAN HELP 
