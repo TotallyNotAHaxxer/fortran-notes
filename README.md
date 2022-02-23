@@ -772,7 +772,24 @@ so in i believe algebra one you are taught frequency tables, the hardest thing f
 | Age 15 and above |	65       |      |            |   195      |	 	 	
 | Column totals	   |	152      | 110  |    98      |   360      |
 
+now in this table we are only going to be paying attention to finishing column 2 `age 15 and above` row 3 which is car, now we have two values here, 98 and 60 which we are going to use to find the amswer, its as simple as this, writing the program to take two variables as a REAL number as user based input, and subtracting those to values, i mean even you can do it try it yourself from what was taught and see if it matches the fortran program below 
 
+```f90
+program main 
+	implicit none
+	REAL :: a, b
+   	REAL :: subtractanswer
+    	print *, ""
+    	print *, "Please input the column total: "
+   	read(*,*) a
+    	print *, "Please input the row's total: "
+    	read(*,*) b
+    	subtractanswer = a - b
+    	write(*,*) "The finished Frequency -> ", a, " - ", b, " = ", subtractanswer 
+end program main
+```
+
+this is well making our test questions and taking them into fortran to help us solve them, i was quite confused at first but then i actually realized i was missing an entire part of frequency tables XD, anyway this program ask the user for the column total which in our case is 98 and then the row aboves total which is 60, this is confusing scince i could not figure out a way to print it but yeah, another test question down 🌆
 
 
 
