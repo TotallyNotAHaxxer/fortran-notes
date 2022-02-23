@@ -704,9 +704,45 @@ program solve
 	print *, "---------------------------------------"					         ! Line break from user input
 	addanswer = a + b                                						 ! 
     	divisionanswer = a / b                           						 ! Dividing user input values from form A and form B
-	write(*, *) "[ First step ] Divided Answer         -> ", a, " / ", b, " = ", divisionanswer
+	write(*, *) "[ First step ] Divided Answer         -> ", a, " / ", b, " = ", divisionanswer      ! Writing the output answer to STD I/O Using WRITE format
+	print*, ""											 ! Line Seperation
+        multiplyanswer = divisionanswer * 100                                                            ! Multiply the division answer by 100 following standard format
+        write(*, *) "[ Second Step ] Multiplication Answer -> ", divisionanswer, " * 100 = ", multiplyanswer ! Finally write the multiplication answer to the I/O Using the write format statment
 
 end program solve
+```
+
+once done if you want to add this we can add the IF, IF ELSE, ELSE THEN statements to check if the decimal is over or under 5, and if it is then round to the nearest low whole number or nearest high whole number etc, the code notes kind of explain everything that is happening there, if you want to you can use the write statement to write to a specific ID and UNIT of a file as is down below 
+
+```f90
+program main 
+    implicit none
+    INTEGER :: x, y
+    REAL :: addanswer, subtractanswer
+    REAL :: multiplyanswer, divisionanswer
+    REAL :: a, b
+    print *, ''	 
+    print *, '[ | ] Please input the first integer  '
+    read(*,*) a
+    print *, ''
+    print *, '[ | ] Please input the second integer '
+    read(*,*) b
+    print*, "------------------------------------------"
+   ! use the open function to open the file and call under a unit
+    open(unit = 2, file = "output.txt")
+    ! adding and subtraction, 
+    addanswer = a + b
+    divisionanswer = a / b
+    !
+    ! Since 2 is the column and UNIT of the file we opened we will be using 2 as the first format paramater since we do not just want to write to IO but also the files unit
+    write(2, *) "[ First step ] Divided Answer         -> ", a, " / ", b, " = ", divisionanswer
+    print*, ""
+    multiplyanswer = divisionanswer * 100
+    write(2, *) "[ Second Step ] Multiplication Answer -> ", divisionanswer, " * 100 = ", multiplyanswer 
+    ! now close the UNIT of the file open function 
+    close(2)
+end program main
+
 ```
 
 
