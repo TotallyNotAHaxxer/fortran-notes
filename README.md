@@ -761,6 +761,20 @@ when we finally run the program and input our variables we will get this output
 
 we now know our answer will be 33% given that we are rounding the the nearest whole precent and that the integer after the decimal point in 32. is over 5, so we are rounding up instead of down, if our integer was below 5 we round down thus our answer would be 32%
 
+# solve unfinished frequency tables 
+
+so in i believe algebra one you are taught frequency tables, the hardest thing for me to grasp until i applied common concepts of math to fortran was solving or figuring out how to finish simple frequency tables, an example table is this 
+
+
+|                  |  Walk/Bike  | Bus  | Car        | Row totals |
+| ---------------- | ----------- | ---- | ---------- | ---------- |
+| Under age 15     |             |      |    60      |            | 
+| Age 15 and above |	65       |      |            |   195      |	 	 	
+| Column totals	   |	152      | 110  |    98      |   360      |
+
+
+
+
 
 # RESOURCES AND LINKS FOR FORTRAN HELP 
 
