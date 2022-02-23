@@ -945,3 +945,19 @@ https://splichal.eu/gccsphinx-final/html/fortran/intrinsic-procedures/
 **Oracal docs on fortran95**
 
 https://docs.oracle.com/cd/E19059-01/stud.10/819-0492/
+
+```
+						Fortran-For-The-Win-1949
+						*    *  *    **  *      
+						 ** * ** ***   *  **    
+						   *        *   *       
+						     *              *   
+
+						   *        *           
+								      * 
+						      *       *   *     
+						**      **      *       
+
+							     *          
+						  * *     *      *   * *
+````
