@@ -651,6 +651,22 @@ end subroutine [name]
 call subroutineName(arguments)  
 ```
 
+# Chapter 2: module 3, applying basic frequency table solutions in fortran
+
+> Why this topic 
+
+so alot of you may be wondering what made me pick up fortran so quickly, given math classes for me were getting harder to understand not being able to cheat, go on google, use a calculator, have my family help me, use even my own programs etc etc i decided welp, i am going to need to break the rules sometime, i eventually taught myself after years of following these shitty rules that cheating is not such a horrible thing or bad thing if you understand the topic and content, thus i picked up fortran for my math classes, in one test i was doing online at home i had come across a question that fucked me over alot that they didnt give a proper understanding in the lesson, the question was the following. 
+
+`Using the two-way table, what percentage of the students that do not like camping like traveling out of state? Round to the nearest whole percent.`
+
+the table is as follows 
+
+|                        | Likes Traveling Out of State | Does Not Like Traveling Out of State | Row totals | 
+| ---------------------- | ---------------------------- | ------------------------------------ | ---------- |
+| Likes Camping          |          52                  |  hfdhudhuiedhg                       | 10         |
+| Does NOT like camping  |          36                  | hsfgjhdjfkghdfjkg                    | 90         |
+| Column totals          |          86                  | dfjghdjfghjdfghj                     |1120        |
+
 
 # RESOURCES AND LINKS FOR FORTRAN HELP 
 
