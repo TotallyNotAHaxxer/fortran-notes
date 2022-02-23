@@ -659,13 +659,33 @@ so alot of you may be wondering what made me pick up fortran so quickly, given m
 
 `Using the two-way table, what percentage of the students that do not like camping like traveling out of state? Round to the nearest whole percent.`
 
-the table is as follows 
+> the table is as follows 
 
 |                        | Likes Traveling Out of State | Does Not Like Traveling Out of State | Row totals | 
 | ---------------------- | ---------------------------- | ------------------------------------ | ---------- |
-| Likes Camping          |          52                  |  hfdhudhuiedhg                       | 10         |
-| Does NOT like camping  |          36                  | hsfgjhdjfkghdfjkg                    | 90         |
-| Column totals          |          86                  | dfjghdjfghjdfghj                     |1120        |
+| Likes Camping          |          52                  |             38                       | 90         |
+| Does NOT like camping  |          36                  |             74                       | 110        |
+| Column totals          |          86                  |             112                      | 200        |
+
+
+now in order to find the numbers we need to round to the whole nearest precent, we need to first find out numbers, and plan out where this is going, that is in order to make a program based around this equation, the reason i chose fortran is unlike other languages fortran kinda pre decimal points everything for you and formats everything, as well as makes it easier to solve equations like this, the first thing we are going to do is find our base variables, since we need to find the precentage of studants that DO NOT like camping but like traveling out of state we will read the rows 
+
+our variables are 
+
+the total number of students and votes that do not like camping but like trvaeling out doors is a value of **36**
+
+now the row total which is our second value is 110
+
+```
+The other 74 that don't like camping, don't like traveling out of state.
+36+74=110
+So, that means there were 110 votes from the students that don't like camping in Total.
+```
+
+now we need to find the division answer by dividing the variables, then multiplying the division answer by 100 ( standard forumla for rounding to the nearest whole precent ), and finally round our number and determin if the integer after the decimal is OVER 5 or UNDER 5
+
+lets now appl this to fortran
+
 
 
 # RESOURCES AND LINKS FOR FORTRAN HELP 
